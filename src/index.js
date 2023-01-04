@@ -1,20 +1,74 @@
+{/*ternary
+
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Home from './components/Home';
+import Contact from './components/Contact';
 
 
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+	return (
+		<>
+			{ isGoal ? <Home/> : <Contact/> }
+		</>
+	);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Goal isGoal={false} />);
+/*}
+
+{/* logical &&
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+function Garage(props) {
+  const cars = props.cars;
+  return (
+    <>
+      <h1>Garage</h1>
+      {cars.length > 0 &&
+        <h2>
+          You have {cars.length} cars in your garage.
+        </h2>
+      }
+    </>
+  );
+}
+
+const cars = [ {name :'volvo'},
+{name :'ferrari'}
+];
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage cars={cars} />);
+*/}
+
+
+
+
+{           /*if else 
+  
+  
+  
+  import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Home from './components/Home';
+import Contact from './components/Contact';
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <Home/>;
+  }
+  return <Contact/>;
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(<Goal isGoal={false} />);*/}
