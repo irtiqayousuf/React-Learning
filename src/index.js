@@ -3,44 +3,35 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Explore from './components/Explore';
-import Menu from './App.js';
+import Home from './pages/home';
+import App from './App';
+import Register from './pages/register.js';
+import Login from './pages/login.js';
 
-
-let menuItems = [ 
-  { id:1, name : "Home", path : "/" },
-  { id:2, name : "About", path : "/about" },
-  { id:3, name : "Contact Us", path : "/contact" },
-  { id:4, name : "Explore", path : "/explore" }
-]; 
 
 const routing = (
   
     <Router>
-      <Menu menuList={menuItems}/>
-        {/* first one is the default path */}
-        <Switch>
-          <Route exact path="/" component={Home}/>   
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/explore" component={Explore}/>
-          
-        </Switch>
+       {/* first one is the default path */}        
+          <Route path="/" component={App}/>
+          <Route path="/register" component={Register}/> 
+          <Route path="/login" component={Login}/>
+          <Route path="/home" component={Home}/>         
     </Router>
   
 )
 ReactDOM.createRoot(document.getElementById('root'));
 render(routing);
-{/*ternary
 
+
+
+{/*ternary
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './components/Home';
 import Contact from './components/Contact';
+
 
 
 
