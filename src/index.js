@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import Home from './pages/home';
-import About from './pages/about';
-import Explore from './pages/explore';
-import Contact from './pages/contact';
-import NotFound from './pages/notfound';
-import Menu from './pages/menu';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Explore from './components/Explore';
+import Menu from './App.js';
 
 
 let menuItems = [ 
@@ -28,7 +27,7 @@ const routing = (
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
           <Route path="/explore" component={Explore}/>
-          <Route component={NotFound} />
+          
         </Switch>
     </Router>
   
