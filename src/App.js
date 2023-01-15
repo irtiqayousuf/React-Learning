@@ -1,4 +1,4 @@
-import React from 'react';
+{/*import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 function MissedGoal() {
@@ -18,4 +18,4 @@ function Goal(props) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Goal isGoal={false} />);
+root.render(<Goal isGoal={false} />);*/}
